@@ -9,7 +9,9 @@ app.set('port', (process.env.PORT || 5000));
 
 app.use(express.static('./server/static/'));
 app.use(express.static('./client/dist/'));
-
+app.get('/fo/f', function(request, response) {
+  response.send('pagesindex');
+});
 
 // start the server
 app.listen(5000, () => {
