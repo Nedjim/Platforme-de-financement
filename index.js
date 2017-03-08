@@ -11,3 +11,4 @@ app.listen(3000, () => {
 });
 
 console.log("process.env :", process.env.NODE_ENV );
+console.log("(process.env.NODE_ENV == production) :", (process.env.NODE_ENV == "production"));
