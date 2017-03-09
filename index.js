@@ -1,22 +1,19 @@
-
-
 const express = require('express');
-
 const app = express();
-app.set('port', (process.env.PORT || 5000));
+
+// Port auto or 3000
+const port = process.env.PORT || 3000;
 
 // tell the app to look for static files in these directories
-
 app.use(express.static('./server/static/'));
 app.use(express.static('./client/dist/'));
-app.get('/fo/f', function(request, response) {
-  response.send('pagesindex');
+
+// Home page
+app.get('/', (req, res) => {
+  res.send("Welcome to home page");
 });
 
 // start the server
-app.listen(5000, () => {
-  console.log('Server is running on http://localhost:5000 or http://127.0.0.1:5000');
+app.listen(port, () => {
+  console.log('Server is running on http://localhost:3000 or http://127.0.0.1:3000');
 });
-
-console.log("process.env :", process.env.NODE_ENV );
-console.log("(process.env.NODE_ENV == production) :", (process.env.NODE_ENV == "production"));
