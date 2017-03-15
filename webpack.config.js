@@ -29,11 +29,11 @@ module.exports = {
       },
       {
         test: /\.(jpg|png|svg)$/,
-loader: 'file-loader',
-options: {
- name: 'images/[hash].[ext]',
-}
-       }
+        loader: 'file-loader',
+        options: {
+          name: 'images/[hash].[ext]',
+        }
+      }
     ],
   },
 

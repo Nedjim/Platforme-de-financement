@@ -5,8 +5,8 @@ const User = require('./user.js');
 
 const ProjectSchema = new Schema({
 	name: String,
-	id: User.Types.ObjectId,
-	email: User.email
+	id: String //Schema.Types.ObjectId,
+	email: String //User.email
   	description: String, 
 	image: {data: Buffer, contentType: String },
 	date: { type: Date, default: Date.now },
