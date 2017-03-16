@@ -2,14 +2,6 @@ import React from 'react';
 import axios from 'axios';
 import Tot from './tot.jsx';
 
-// const dataProject = [
-//   {
-//     task: "sss"
-//   },
-//   {
-//     task: "mager"
-//   }
-// ]
 export default class Test extends React.Component {
     constructor(props){
       super(props);
