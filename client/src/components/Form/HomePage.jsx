@@ -1,11 +1,16 @@
 import React from 'react';
-import { Card, CardTitle } from 'material-ui/Card';
+
+import Header from '../Header/Header.jsx';
+import Content from '../Content/Content.jsx';
+import Footer from '../Footer/Footer.jsx';
 
 
 const HomePage = () => (
-  <Card className="container">
-    <CardTitle title="React Application" subtitle="This is the home page." />
-  </Card>
+  <div className="container">
+    	<Header />
+        <Content />
+        <Footer />
+  </div>
 );
 
 export default HomePage;

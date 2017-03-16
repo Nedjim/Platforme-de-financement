@@ -67,7 +67,8 @@ class SignUpPage extends React.Component {
       } else {
         
         // failure
-        console.dir(xhr);
+        
+        //console.dir(xhr);
 
         const errors = xhr.response.errors ? xhr.response.errors : {};
         errors.summary = xhr.response.message;
@@ -77,7 +78,9 @@ class SignUpPage extends React.Component {
         });
       }
     });
-    console.log('data', formData);
+    
+    //console.log('data', formData);
+    
     xhr.send(formData);
   }
 
@@ -94,7 +97,7 @@ class SignUpPage extends React.Component {
     this.setState({
       user
     });
-    console.log('user', user);
+    //console.log('user', user);
   }
 
 
