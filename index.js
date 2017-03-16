@@ -10,7 +10,7 @@ const config = require('./config.js');
 
 //Pira, essai de debloquer  la ligne 13 et tu  verras qu'il ya une erreur. Tu vas mieux la comprendre, je te laisse la resoudre.
 
-//require('./server/models').connect(config.dbUrl);
+require('./server/models').connect(config.dbUrl);
 
 // tell the app to parse HTTP body messages
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -24,13 +24,6 @@ app.use(morgan('dev'));
 app.use(express.static('./server/static/'));
 app.use(express.static('./client/dist/'));
 
-// config access handle cors request
-app.use(function(req, res, next){
-	res.setHeader('Access-Control-Allow-Origin', '*'); // give all access
-	res.setHeader('Access-Control-Allow-Methods', 'GET, POST'); // accept methods
-	res.setHeader('Access-Control-Allow-Headers', 'X-requested-With, content-type, Authorization'); // accept XML
-	next();
-});
 // pass the passport middleware
 app.use(passport.initialize());
 
