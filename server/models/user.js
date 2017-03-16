@@ -1,15 +1,12 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-
+const bcrypt = require('bcrypt')
 const UserSchema = new Schema({
 	name: { type: String, required: true },
 	id: Schema.Types.ObjectId,
 	email: { type: String, index: { unique: true }, required: true },
   password: { type: String, required: true }, 
-	image: { data: Buffer, contentType: String },
-	age: { type: Number, min: 18, max: 99, required: true },
 	date: { type: Date, default: Date.now },
-	location: { type: String, required: true}  //{street: String, number: String, zip: Number, city: String, required: true}
 });
 
 /**
