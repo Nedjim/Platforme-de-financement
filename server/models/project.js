@@ -3,12 +3,14 @@ const Schema = mongoose.Schema;
 
 const ProjectSchema = new Schema({
 	name: String,
-	email: String, 
-  	description: String, 
+	id: String, //Schema.Types.ObjectId,
+	email: String, //User.email
+  description: String,
 	image: {data: Buffer, contentType: String },
 	date: { type: Date, default: Date.now },
-	location: String, //{street: String, number: String, zip: String, city: String, required: true},
-	fixedAmount: { type: Number, required: true },
+	location: {street: String, number: String, zip: String, city: String},
+	fixedAmount: {type: Number, required: true},
+	wantedAmount: Number,
 	receivedAmount: Number
 });
 

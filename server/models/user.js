@@ -1,11 +1,23 @@
 const mongoose = require('mongoose');
+
+// const UserSchema = new Schema({
+// 	name: String,
+// 	username: {type: String, index: true, unique: true , required: true },
+// 	id: Schema.Types.ObjectId,
+// 	email: {type: String, index: true, unique: true , required: true },
+//   password: String,
+// 	image: {data: Buffer, contentType: String },
+// 	age: { type: Number, min: 18, max: 99 },
+// 	date: { type: Date, default: Date.now },
+// 	location: {street: String, number: String, zip: Number, city: String}
+// =======
 const Schema = mongoose.Schema;
 const bcrypt = require('bcrypt')
 const UserSchema = new Schema({
 	name: { type: String, required: true },
 	id: Schema.Types.ObjectId,
 	email: { type: String, index: { unique: true }, required: true },
-  password: { type: String, required: true }, 
+  password: { type: String, required: true },
 	date: { type: Date, default: Date.now },
 });
 
@@ -43,5 +55,4 @@ UserSchema.pre('save', function saveHook(next) {
     });
   });
 });
-
 module.exports = mongoose.model('User', UserSchema);
