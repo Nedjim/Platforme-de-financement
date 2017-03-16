@@ -19,7 +19,8 @@ function validateSignupForm(payload) {
   let isFormValid = true;
   let message = '';
 
-  console.log('payload', payload);
+  //console.log('payload', payload);
+  
   if (!payload || typeof payload.email !== 'string' || !validator.isEmail(payload.email)) {
     isFormValid = false;
     errors.email = 'Please provide a correct email address.';
@@ -87,7 +88,9 @@ function validateLoginForm(payload) {
 }
 
 router.post('/signup', (req, res, next) => {
-  console.log('body', req.body);
+  
+  //console.log('body', req.body);
+  
   const validationResult = validateSignupForm(req.body);
   if (!validationResult.success) {
     return res.status(400).json({
@@ -111,7 +114,9 @@ router.post('/signup', (req, res, next) => {
           }
         });
       }
-      console.log(err)
+      
+      // console.log(err)
+      
       return res.status(400).json({
         success: false,
         message: 'Could not process the form.'
