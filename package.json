@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "sasslintConfig": ".sass-lint.yml",
   "scripts": {
     "start": "node index.js",
     "start-dev": "nodemon --use_strict index.js",
@@ -40,6 +41,7 @@
     "babel-preset-react": "^6.23.0",
     "css-loader": "^0.26.4",
     "node-sass": "^4.5.0",
+    "sass-lint": "^1.10.2",
     "sass-loader": "^6.0.3",
     "style-loader": "^0.13.2",
     "webpack": "^2.2.1"

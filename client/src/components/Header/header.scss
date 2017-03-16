@@ -1,6 +1,76 @@
+$light-grey: #d9d9d9;
+$grey: #666;
+$black: #000;
+$white: #fff;
+
+@mixin margin-padding($value) {
+  margin: $value;
+  padding: $value;
+}
+
 header {
-    background: yellow;
-    h1 {
-        font-size: 30px;
+  nav {
+    width: 100%;
+  }
+
+  .premier {
+    @include margin-padding(0);
+    display: flex;
+    // width: 100%;
+
+    .logo {
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
     }
+
+    img {
+      height: 10vh;
+      position: relative;
+      width: 100%;
+      z-index: 1;
+    }
+
+    .utilites {
+      display: flex;
+      height: 5vh;
+      justify-content: flex-end;
+      position: absolute;
+      width: 100%;
+      z-index: 999;
+    }
+  }
+
+  .second {
+    @include margin-padding(0);
+    display: flex;
+    width: 100%;
+
+    .menu {
+      @include margin-padding(0);
+      background-color: $light-grey;
+      display: inherit;
+      justify-content: space-around;
+      list-style-type: none;
+      width: inherit;
+
+      li {
+        line-height: 5vh;
+        position: relative;
+        text-align: left;
+      }
+
+      a {
+        color: $black;
+        display: block;
+        padding: 8px 25px;
+        text-decoration: none;
+      }
+
+      & :hover {
+        background-color: $grey;
+        color: $white;
+      }
+    }
+  }
 }
