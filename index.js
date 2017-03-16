@@ -1,7 +1,13 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
+const passport = require('passport');
 const app = express();
+
+const config = require('./config.js');
+
+// connect to the database and load models
+require('./server/models').connect(config.dbUrl);
 
 // tell the app to parse HTTP body messages
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -10,20 +16,32 @@ app.use(bodyParser.json());
 // logs all requests  
 app.use(morgan('dev'));
 
-const config = require('./config.js');
 // tell the app to look for static files in these directories
 app.use(express.static('./server/static/'));
 app.use(express.static('./client/dist/'));
 
-// config access handle cors request
-app.use(function(req, res, next){
-	res.setHeader('Access-Control-Allow-Origin', '*'); // give all access
-	res.setHeader('Access-Control-Allow-Methods', 'GET, POST'); // accept methods 
-	res.setHeader('Access-Control-Allow-Headers', 'X-requested-With, content-type, Authorization'); // accept XML
-	next();
-});
+// pass the passport middleware
+app.use(passport.initialize());
+
+// load passport strategies
+const localSignupStrategy = require('./server/passport/local-signup');
+const localLoginStrategy = require('./server/passport/local-login');
+passport.use('local-signup', localSignupStrategy);
+passport.use('local-login', localLoginStrategy);
+
+// pass the authenticaion checker middleware
+const authCheckMiddleware = require('./server/middleware/auth-check');
+app.use('/api', authCheckMiddleware);
+
 
 // Routes
+
+const authRoutes = require('./server/routes/auth');
+app.use('/auth', authRoutes);
+
+const apiRoutes = require('./server/routes/api');
+app.use('/api', apiRoutes);
+
 const user = require('./server/routes/user');
 app.use('/users',user);
 
@@ -39,5 +57,5 @@ app.use('/signup',signup);
 
 // start the server
 app.listen(config.port, () => {
-  console.log('Server is running on http://localhost:3000 or ', config.port);
+  console.log('Server is running on http://localhost:5000 or ', config.port);
 });
