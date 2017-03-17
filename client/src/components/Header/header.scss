@@ -7,7 +7,9 @@ $white: #fff;
   margin: $value;
   padding: $value;
 }
-
+.container {
+  width: 100vw;
+}
 header {
   nav {
     width: 100%;
