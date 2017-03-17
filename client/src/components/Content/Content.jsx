@@ -1,6 +1,5 @@
 import React from 'react';
 import './content.scss';
-<<<<<<< HEAD
 import axios from 'axios';
 
 export default class Content extends React.Component {
@@ -30,15 +29,6 @@ console.log(this.state.dataProjects[0]);
               {/* <h1>Nom: {dataProjects[0].name}</h1>
  */}
 
-=======
-import image from '../images/imgtest.jpg';
-
-
-export default class Content extends React.Component {
-    render() {
-        return (
-            <div id='content'>
->>>>>>> a1d966e17f541e83658dc18393cd476cffc1f566
 
             <div className="TopProjet">
                 <h1>

@@ -3,10 +3,6 @@ import './Footer.scss';
 import './Footer.js';
 
 import img1 from '../images/imgtest.jpg';
-=======
-// import img1 from '../images/trdelnik.jpg';
-import img1 from '../images/logo.png';
-
 export default class Footer extends React.Component {
     render() {
         return (
