@@ -1,8 +1,12 @@
 import React from 'react';
 import './Footer.scss';
 import './Footer.js';
+
+import img1 from '../images/imgtest.jpg';
+=======
 // import img1 from '../images/trdelnik.jpg';
 import img1 from '../images/logo.png';
+
 export default class Footer extends React.Component {
     render() {
         return (
@@ -12,7 +16,7 @@ export default class Footer extends React.Component {
                         <div className="three">
                             <div className="col1">
                                 <div>
-                                    <h3>Financé et enligne</h3>
+                                    <h3>Financé et en ligne</h3>
                                 </div>
                                 <div className="cont">
                                     <img src={img1} alt=""/>
