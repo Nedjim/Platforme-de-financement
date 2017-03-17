@@ -11,7 +11,8 @@ const ProjectSchema = new Schema({
 	location: {street: String, number: String, zip: String, city: String},
 	fixedAmount: {type: Number, required: true},
 	wantedAmount: Number,
-	receivedAmount: Number
+	receivedAmount: Number,
+	urlImage: String
 });
 
 module.exports = mongoose.model('Project', ProjectSchema);

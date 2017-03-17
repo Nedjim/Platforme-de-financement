@@ -25,6 +25,7 @@ router.route('/')
         project.fixedAmount = req.body.fixedAmount;
         project.wantedAmount = req.body.wantedAmount;
         project.receivedAmount = req.body.receivedAmount;
+				project.urlImage = req.body.urlImage;
 				project.save(function(err){
 					if(err){
 						res.send(err);
@@ -54,6 +55,7 @@ router.route('/:project_id')
             project.fixedAmount = req.body.fixedAmount;
             project.wantedAmount = req.body.wantedAmount;
             project.receivedAmount = req.body.receivedAmount;
+						project.urlImage = req.body.urlImage;
             project.save(function(err){
               if(err){
                 res.send(err);
