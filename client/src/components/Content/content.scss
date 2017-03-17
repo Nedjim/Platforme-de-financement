@@ -1,39 +1,36 @@
 #content{
 
+
 .TopProjet h1{
   font-size: 4vh;
   text-align: center;
 }
 .imgtopprojet{
-border: solid black;
-height: 30vh;
-width: 30vh;
-margin-left: 45vh;
+margin-right: -15%;
+}
+
+.limagedutop img{
+  height: 100%;
+  width: 60%;
+  margin-left: 20%;
+
 }
 
 .content-1 ul {
   list-style: none;
+  font-family: 'Josefin Sans', sans-serif;
+
 }
 
-.buttontop button {
+.content-1{
   display: inline-flex;
 }
 
 .buttontop{
   display: flex;
-  align-items:flex-end;
+  flex-flow: column-reverse;
 }
 
-.buttontop progress{
-  display: inline-block;
-margin-bottom: 10vh;
-width: 40vh;
-}
-
-.content-1{
-  display: inline-flex;
-
-}
 
 
 }
