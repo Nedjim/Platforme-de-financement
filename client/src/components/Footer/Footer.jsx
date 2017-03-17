@@ -1,7 +1,6 @@
 import React from 'react';
 import './Footer.scss';
 import './Footer.js';
-
 import img1 from '../images/imgtest.jpg';
 export default class Footer extends React.Component {
     render() {

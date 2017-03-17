@@ -19,12 +19,12 @@ export default class Pcomponents extends React.Component {
       this.setState({
         dataProjects : dataProjects
       });
-  // console.log(dataProjects);
+   console.log(dataProjects);
     });
   }
 
     render(){
-    //  console.log(this.state.dataProjects);
+      console.log(this.state.dataProjects);
         return(
 
             <div>
