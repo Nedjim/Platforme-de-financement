@@ -1,8 +1,9 @@
 import React from 'react';
 import axios from 'axios';
-import Tot from './tot.jsx';
+import Header from '../Header/Header.jsx';
+import Project from './projet.jsx';
 
-export default class Test extends React.Component {
+export default class Pcomponents extends React.Component {
     constructor(props){
       super(props);
       this.state = {
@@ -25,8 +26,10 @@ export default class Test extends React.Component {
     render(){
     //  console.log(this.state.dataProjects);
         return(
+
             <div>
-                 <Tot dataProjects={this.state.dataProjects}/>
+                <Header/>
+                 <Project dataProjects={this.state.dataProjects}/>
 
             </div>
         )

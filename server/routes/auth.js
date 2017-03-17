@@ -14,12 +14,15 @@ const router = express.Router();
  * @returns {object} The result of validation. Object contains a boolean validation result,
  *                   errors tips, and a global message for the whole form.
  */
+
+
+
 function validateSignupForm(payload) {
   const errors = {};
   let isFormValid = true;
   let message = '';
 
-  //console.log('payload', payload);
+  console.log('payload', payload);
   
   if (!payload || typeof payload.email !== 'string' || !validator.isEmail(payload.email)) {
     isFormValid = false;
@@ -34,6 +37,28 @@ function validateSignupForm(payload) {
   if (!payload || typeof payload.name !== 'string' || payload.name.trim().length === 0) {
     isFormValid = false;
     errors.name = 'Please provide your name.';
+  }
+
+  if (!payload || !validator.isNumeric(payload.age) || payload.age < 18) {
+    isFormValid = false;
+    errors.age = 'Please provide your age.';
+  }
+
+  addressValidator.validate(payload.address, addressValidator.match.streetAddress, (err, exact, inexact) => {
+    console.log('input: ', payload.address.toString());
+    console.log('match: ', _.map(exact, (a) => {
+      return a.toString();
+    }));
+    console.log('did you mean: ', _.map(inexact, (a) => {
+      return a.toString();
+    }));
+    isFormValid = exact.length > 0;
+    errors.name = 'Please provide your address.';
+  });
+
+  if (!payload || !validator.isURL(payload.avatar)) {
+    isFormValid = false;
+    errors.avatar = 'Please provide your avatar.';
   }
 
   if (!isFormValid) {
@@ -68,13 +93,6 @@ function validateLoginForm(payload) {
     isFormValid = false;
     errors.password = 'Please provide your password.';
   }
-
-  // if (!payload || typeof payload.age !== 'number' || !validator.isNumeric(payload.age) || payload.age < 18) {
-  //   isFormValid = false;
-  //   errors.age = 'Please provide your age.';
-  // }
-
-  // if (!payload || typeof payload.address !== 'string' || )
 
   if (!isFormValid) {
     message = 'Check the form for errors.';
