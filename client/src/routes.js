@@ -4,6 +4,7 @@ import DashboardPage from './components/Form/DashboardPage.jsx';
 import LoginPage from './components/Form/LoginPage.jsx';
 import SignUpPage from './components/Form/SignUpPage.jsx';
 import Auth from './modules/Auth';
+import Pcomponents from './components/Projets/projectsComponents.jsx';
 
 
 const routes = {
@@ -40,6 +41,10 @@ const routes = {
         // change the current URL to /
         replace('/');
       }
+    },
+    {
+      path: '/projects',
+      component:  Pcomponents
     }
 
   ]
