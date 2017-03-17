@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import Header from '../Header/Header.jsx';
 import Project from './projet.jsx';
 
 export default class Pcomponents extends React.Component {
@@ -25,7 +26,9 @@ export default class Pcomponents extends React.Component {
     render(){
     //  console.log(this.state.dataProjects);
         return(
+
             <div>
+                <Header/>
                  <Project dataProjects={this.state.dataProjects}/>
 
             </div>
