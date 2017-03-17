@@ -48,15 +48,33 @@ const SignUpForm = ({
         />
       </div>
 
-      
+      <div className="field-line">
+        <TextField
+          floatingLabelText="Address"
+          name="address"
+          onChange={onChange}
+          errorText={errors.address}
+          value={user.address}
+        />
+      </div>
+
+      <div className="field-line">
+        <TextField
+          floatingLabelText="Age"
+          name="age"
+          onChange={onChange}
+          errorText={errors.age}
+          value={user.age}
+        />
+      </div>
 
       <div className="field-line">
         <TextField
           floatingLabelText="Avatar"
-          name="image"
+          name="avatar"
           onChange={onChange}
-          errorText={errors.image}
-          value={user.image}
+          errorText={errors.avatar}
+          value={user.avatar}
         />
       </div>
 
