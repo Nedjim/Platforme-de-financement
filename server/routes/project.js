@@ -16,7 +16,7 @@ router.route('/')
 			.post(function(req, res) {
 				var project = new Project();
         project.name = req.body.name;
-        project.id = req.body.id;
+        project.id = Schema.Types.ObjectId;
         project.email = req.body.email;
         project.description = req.body.description;
         project.image = req.body.image;
@@ -46,7 +46,7 @@ router.route('/:project_id')
         .put(function(req, res){
           Project.findOne({_id: req.params.project_id}, function(err, project){
             project.name = req.body.name;
-            project.id = req.body.id;
+            project.id = Schema.Types.ObjectId;
             project.email = req.body.email;
             project.description = req.body.description;
             project.image = req.body.image;
@@ -72,5 +72,7 @@ router.route('/:project_id')
           }
           res.send({message: "project deleted"});
         });
+        res.redirect('/projects')      
       });
+
 module.exports = router;
