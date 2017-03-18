@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router';
+
 import './header.scss';
 import logo from '../images/banner2.png';
 
@@ -23,7 +25,7 @@ export default class Header extends React.Component {
                 <li><a href="#">À propos de nous</a></li>
                 <li><a href="#">Toutes les projets</a></li>
                 <li><a href="#">Comment ca marche?</a></li>
-                <li><a href="#">Proposer un projet</a></li>
+                <Link to="/project">Proposer un projet</Link>
                 <li><a href="#">Forum de discution</a></li>
               </ul>
             </div>
