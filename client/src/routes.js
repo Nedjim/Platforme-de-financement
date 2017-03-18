@@ -5,6 +5,7 @@ import LoginPage from './components/Form/LoginPage.jsx';
 import SignUpPage from './components/Form/SignUpPage.jsx';
 import ProjectFormPage from './components/ProjectForm/ProjectFormPage.jsx';
 import Auth from './modules/Auth';
+import Pcomponents from './components/Projets/projectsComponents.jsx';
 
 
 const routes = {
@@ -47,6 +48,11 @@ const routes = {
       path: '/project',
       component: ProjectFormPage
     },
+
+    {
+      path: '/projects',
+      component:  Pcomponents
+    }
 
   ]
 };

@@ -6,7 +6,9 @@ import logo from '../images/banner2.png';
 
 
 export default class Header extends React.Component {
+
   render(){
+
     return(
         <header>
           <nav>
@@ -23,7 +25,7 @@ export default class Header extends React.Component {
             <div className="second">
               <ul className="menu">
                 <li><a href="#">À propos de nous</a></li>
-                <li><a href="#">Toutes les projets</a></li>
+                <Link to="/projects">Toutes les projets</Link>
                 <li><a href="#">Comment ca marche?</a></li>
                 <Link to="/project">Proposer un projet</Link>
                 <li><a href="#">Forum de discution</a></li>

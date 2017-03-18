@@ -2,6 +2,9 @@
   "name": "ikickapp",
   "version": "1.0.0",
   "description": "",
+  "engines": {
+   "node": "6.10.0"
+ },
   "main": "index.js",
   "sasslintConfig": ".sass-lint.yml",
   "scripts": {
