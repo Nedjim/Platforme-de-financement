@@ -3,108 +3,151 @@ $yel: #ffff00;
 $blk: #000;
 $wht: #fff;
 
-.footer-wrap{
-  padding: 2%;
-.three{
-  display: flex;
-  justify-content: space-around;
-} .col1{
-  width: 100%;
-  align-content: center;
-}
+.footer-wrap {
+    padding: 0.5%;
 
-.wrap{
-  background: $blk;
-color: $wht;
-}
+    .three {
+        display: flex;
+        justify-content: space-around;
+    }
 
-.footer-text{
-  text-align: left;
-  display: flex;
-  justify-content: space-around;
-}
- .footer-icon{
-   display: inline-flex;
- }
- .fa{
-   font-size: 145%;
-   padding: 20%;
- }
-  .fa:hover{
-   color: $prim;
- }
- .fa fa-twitter:hover{
-   color: blue;
- }
- .fa fa-instagram:hover{
-   background: blue;
- }
- .fa fa-pinterest:hover{
-   background: blue;
- }
- .base{
-   display: flex;
-   justify-content: space-between;
- }
+    .col1 {
+        width: 100%;
+        align-content: center;
+    }
 
-   button:hover{
-     background: $prim;
-   }
-   button{
-     border-radius: 10%;
-   }
-   .lang{
-     border: dashed 0.1px;
-     border-radius: 25%;
-     margin-top: 1em;
-     margin-bottom: 1em;
-   }
-   .lang:hover{
-     background: $yel;
-   }
-   .lang ul{
-     list-style: none;
-   }
-   .lang2{
-     display: none;
-   }
-   .lang2:hover{
-     display: inline-block;
-     background: red;
-     list-style: none;
-     color: $wht;
-     bottom: 100%;
-   }
+    .wrap {
+        background: $blk;
+        color: $wht;
+    }
 
- .footer-icon li{
-   list-style: none;
- }
+    .footer-text {
+        text-align: left;
+        display: flex;
+        justify-content: space-around;
+    }
 
- .text1 ul{
-   list-style: none;
- }
- .col1{
-   padding: 5%;
- }
- img{
-   width: 100%;
-   border-radius: 25%;
- }
-.three{
-  background: $yel;
-}
-.cont .fa {
-color: green;
-padding: 2%;
-}
-.cont .fa:hover{
-  color: red;
-}
-th{
-  text-align: left;
-}
-progress{
-  border-radius: 10%;
-}
+    .footer-icon {
+        display: inline-flex;
+    }
 
+    .fa {
+        font-size: 145%;
+        padding: 20%;
+    }
+
+    .fa:hover {
+        color: $prim;
+    }
+
+    .fa fa-twitter:hover {
+        color: blue;
+    }
+
+    .fa fa-instagram:hover {
+        background: blue;
+    }
+
+    .fa fa-pinterest:hover {
+        background: blue;
+    }
+
+    .base {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    button:hover {
+        background: $prim;
+    }
+
+    button {
+        border-radius: 10%;
+    }
+
+    .lang {
+        border: dashed 0.1px;
+        border-radius: 25%;
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+
+    .lang:hover {
+        background: $yel;
+    }
+
+    .lang ul {
+        list-style: none;
+    }
+
+    .lang2 {
+        display: none;
+    }
+
+    .lang2:hover {
+        display: inline-block;
+        background: red;
+        list-style: none;
+        color: $wht;
+        bottom: 100%;
+    }
+
+    .footer-icon li {
+        list-style: none;
+    }
+
+    .text1 ul {
+        list-style: none;
+    }
+
+    .col1 {
+        padding: 0.5%;
+    }
+
+    img {
+        width: 375px;
+        height: 200px;
+        border-radius: 25%;
+    }
+
+    img:hover {
+        box-shadow: 5px 5px $blk;
+    }
+
+    .three {
+        background: $wht;
+    }
+
+    .cont .fa {
+        color: green;
+        padding: 2%;
+    }
+
+    .cont .fa:hover {
+        color: red;
+    }
+
+    th {
+        text-align: left;
+    }
+
+    progress {
+        border-radius: 10%;
+    }
+
+    .cont p {
+        position: absolute;
+        width: 350px;
+        height: 200px;
+        margin-top: -15%;
+        padding: 2%;
+        opacity: 0;
+    }
+
+    .cont p:hover {
+        display: flex;
+        opacity: 1;
+        position: absolute;
+        background: rgba(255, 255, 255, 0.3);
+    }
 }

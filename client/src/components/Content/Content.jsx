@@ -1,7 +1,11 @@
 import React from 'react';
 import './content.scss';
+<<<<<<< HEAD
 import axios from 'axios';
 import image from '../images/projjjet.jpg';
+
+//import axios from 'axios';
+import image from '../images/trdelnik.jpg';
 
 export default class Content extends React.Component {
 //   constructor(props){
