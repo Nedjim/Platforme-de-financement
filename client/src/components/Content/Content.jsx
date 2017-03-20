@@ -1,6 +1,6 @@
 import React from 'react';
 import './content.scss';
-<<<<<<< HEAD
+
 import axios from 'axios';
 import image from '../images/projjjet.jpg';
 
