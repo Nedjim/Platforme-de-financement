@@ -29,7 +29,7 @@ export default class Header extends React.Component {
                 <li><a href="#">À propos de nous</a></li>
                 <li><Link to="/projects">Toutes les projets</Link></li>
                 <li><a href="#">Comment ca marche?</a></li>
-                <Link to="/project">Proposer un projet</Link>
+                <li><Link to="/project">Proposer un projet</Link></li>
                 <li><a href="#">Forum de discution</a></li>
               </ul>
             </div>
