@@ -105,12 +105,13 @@ $wht: #fff;
     }
 
     img {
-        width: 100%;
+        width: 375px;
+        height: 200px;
         border-radius: 25%;
     }
-    img:hover{
-      box-shadow: 5px 5px $blk;
-      width: 100%;
+
+    img:hover {
+        box-shadow: 5px 5px $blk;
     }
 
     .three {
@@ -132,5 +133,21 @@ $wht: #fff;
 
     progress {
         border-radius: 10%;
+    }
+
+    .cont p {
+        position: absolute;
+        width: 350px;
+        height: 200px;
+        margin-top: -15%;
+        padding: 2%;
+        opacity: 0;
+    }
+
+    .cont p:hover {
+        display: flex;
+        opacity: 1;
+        position: absolute;
+        background: rgba(255, 255, 255, 0.3);
     }
 }

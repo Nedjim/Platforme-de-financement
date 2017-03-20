@@ -1,13 +1,11 @@
 import React from 'react';
 import './Footer.scss';
 import './Footer.js';
-import img1 from '../images/sfr.jpg';
-import img2 from '../images/trdelnik.jpg';
-
-
+import img1 from '../images/prj1.jpg';
+import img2 from '../images/prj2.jpg';
+import img3 from '../images/prj3.jpg';
 // import img1 from '../images/trdelnik.jpg';
 // import img1 from '../images/logo.png';
-
 
 export default class Footer extends React.Component {
     render() {
@@ -21,20 +19,20 @@ export default class Footer extends React.Component {
                                     <h3>Financé et en ligne</h3>
                                 </div>
                                 <div className="cont">
-                                    <img src={img1} alt=""/>
+                                    <div>
+                                        <img src={img1} alt=""/>
+                                        <p>Entre le déclin des lumières et le levé des ombres, charnière de deux mondes, le crépuscule s’installe. Certains s'endorment et d'autres s'éveillent, fenêtre du temps où toutes les rencontres sont alors possibles. A pas feutrés jusqu’au cœur de la nuit, laissez le lynx vous guider.</p>
+                                    </div>
                                     <table>
                                         <tr>
                                             <th>Nom de projet:</th>
-                                            <td>blaaablaaa</td>
+                                            <td>Crépuscules</td>
                                         </tr>
-                                        <tr>
-                                            <th>Description:</th>
-                                            <td>lorem paragraph text ljkjdhdolwiufiicjejlicukl</td>
-                                        </tr>
+
                                         <tr>
                                             <th>progrès:</th>
                                             <td>
-                                                <progress value="50" max="100"></progress>
+                                                <progress value="100" max="100"></progress>
                                             </td>
                                         </tr>
                                     </table>
@@ -52,20 +50,20 @@ export default class Footer extends React.Component {
                                     <h3>En cours de financement</h3>
                                 </div>
                                 <div className="cont">
-                                    <img src={img1} alt=""/>
+                                    <div>
+                                        <img src={img2} alt=""/>
+
+                                        <p>Les enfants, petits et grands, les enfants d'alentour et des plus hautes tours y courent, y courent s'y installent pour toujours, pour… presque toujours !</p>
+                                    </div>
                                     <table>
                                         <tr>
                                             <th>Nom de projet:</th>
-                                            <td>blaaablaaa</td>
-                                        </tr>
-                                        <tr>
-                                            <th>Description:</th>
-                                            <td>lorem paragraph text ljkjdhdolwiufiicjejlicukl</td>
+                                            <td>LUCIOLE</td>
                                         </tr>
                                         <tr>
                                             <th>progrès:</th>
                                             <td>
-                                                <progress value="20" max="100"></progress>
+                                                <progress value="60" max="100"></progress>
                                             </td>
                                         </tr>
                                     </table>
@@ -83,15 +81,14 @@ export default class Footer extends React.Component {
                                     <h3>Projet recént</h3>
                                 </div>
                                 <div className="cont">
-                                    <img src={img1} alt=""/>
+                                    <div>
+                                        <img src={img3} alt=""/>
+                                        <p>Après le 1er potager d'open space, nous avons conçu un potager d'intérieur pour la maison : Jean Racine, le potager cultivé. L'objectif du financement participatif est de rendre possible sa commercialisation.</p>
+                                    </div>
                                     <table>
                                         <tr>
                                             <th>Nom de projet:</th>
-                                            <td>blaaablaaa</td>
-                                        </tr>
-                                        <tr>
-                                            <th>Description:</th>
-                                            <td>lorem paragraph text ljkjdhdolwiufiicjejlicukl</td>
+                                            <td>Ciel mon radis !</td>
                                         </tr>
                                         <tr>
                                             <th>progrès:</th>
