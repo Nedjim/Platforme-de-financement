@@ -1,12 +1,13 @@
 import React from 'react';
 import {Link} from 'react-router';
-
 import './header.scss';
 import logo from '../images/banner2.png';
 
 
 export default class Header extends React.Component {
+
   render(){
+
     return(
         <header>
           <nav>
@@ -30,6 +31,7 @@ export default class Header extends React.Component {
               </ul>
             </div>
           </nav>
+
         </header>
     )
   }

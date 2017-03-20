@@ -1,6 +1,6 @@
 const dotenv = require('dotenv').config();
 const mongoose = require('mongoose');
-//mongoose.connect(`mongodb://${process.env.USER_DB}:${process.env.PASSWORD_DB}@ds123930.mlab.com:23930/kickass`);
+
 module.exports = {
   'port': process.env.PORT || 3000,
   'dbUrl': `mongodb://${process.env.USER_DB}:${process.env.PASSWORD_DB}@ds123930.mlab.com:23930/kickass`,
