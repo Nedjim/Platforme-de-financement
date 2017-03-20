@@ -1,7 +1,7 @@
 import React from 'react';
-import axios from 'axios';
 import Header from '../Header/Header.jsx';
 import Project from './projet.jsx';
+import axios from 'axios';
 
 export default class Pcomponents extends React.Component {
     constructor(props){
@@ -13,7 +13,7 @@ export default class Pcomponents extends React.Component {
 
     }
    getData(){
-    axios.get('http://localhost:3000/project').then((response) => {
+    axios.get('https://quiet-tundra-35186.herokuapp.com/project').then((response) => {
 
       let dataProjects = response.data;
       this.setState({

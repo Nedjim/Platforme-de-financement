@@ -10,7 +10,10 @@ const config = require('./config.js');
 
 //Pira, essai de debloquer  la ligne 13 et tu  verras qu'il ya une erreur. Tu vas mieux la comprendre, je te laisse la resoudre.
 
+
+
 require('./server/models').connect(config.dbUrl);
+
 
 // tell the app to parse HTTP body messages
 app.use(bodyParser.urlencoded({ extended: false }));

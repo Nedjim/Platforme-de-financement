@@ -14,6 +14,7 @@ export default class Project extends React.Component {
         return (
             <div className="projects">
                 { this.props.dataProjects.map( (bike, i) =>
+
                     <div className="project" key={i}><img src={bike.urlImage}/>
                      <p className="description">{bike.description}</p>
                       <p className="name">{bike.name}</p>
@@ -21,10 +22,9 @@ export default class Project extends React.Component {
                       <p className="financed">Financé: <span>{bike.receivedAmount}</span> € </p>
                       <p className="date">{bike.date}</p>
                   </div>
+
+
                 )}
-                {/* { this.props.dataProjects.map( (bike, i) =>
-                    <div className="name" key={i}>{bike.description}</div>
-                )} */}
             </div>
 
         );
