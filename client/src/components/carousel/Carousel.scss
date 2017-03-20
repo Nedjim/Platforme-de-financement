@@ -1,0 +1,58 @@
+* {
+
+  margin: 0;
+
+  padding: 0;
+
+}
+
+
+.App {
+
+	display: flex;
+
+  flex-direction: row;
+
+	align-items: center;
+
+	justify-content: space-around;
+
+	text-align: center;
+
+	height: 100vh;
+
+}
+
+
+
+.container {
+
+   width: 400px;
+
+   border : 4px dashed red;
+
+   overflow : hidden;
+
+}
+
+
+
+ul {
+
+   display : flex;
+
+   list-style: none;
+
+   transition : all 1s ease-in-out;
+
+}
+
+
+
+.Carousel {
+
+   height : 300px;
+
+   width: 400px;
+
+}

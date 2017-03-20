@@ -7,7 +7,7 @@ const Dashboard = ({ secretData }) => (
   <Card className="container">
     <CardTitle
       title="Tableau de bord"
-      subtitle="Vous n'aurez accès a cette page qu'après identification."
+      subtitle="Vous avez maintenant accès a vôtre page de profil."
     />
 
     {secretData && <CardText style={{ fontSize: '16px', color: 'green' }}>{secretData}</CardText>}
@@ -18,7 +18,7 @@ const Dashboard = ({ secretData }) => (
 <li>Nom:</li>
 <li>Age:</li>
 <li>Ville:</li>
-<li>Membre depuis:</li>  
+<li>Membre depuis:</li>
 </ul>
   </div>
 

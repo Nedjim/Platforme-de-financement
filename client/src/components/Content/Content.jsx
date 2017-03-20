@@ -1,7 +1,7 @@
 import React from 'react';
 import './content.scss';
 import axios from 'axios';
-import image from '../images/trdelnik.jpg';
+import image from '../images/projjjet.jpg';
 
 export default class Content extends React.Component {
 //   constructor(props){
@@ -34,28 +34,33 @@ export default class Content extends React.Component {
             </div>
 
             <div className="content-1">
-            <div className="limagedutop"> <img src={image}/></div>
+            <div className="limagedutop"> <img src={image}/>
+            <h3> La Caravane des monstres </h3>
+              <div className="buttontop">
+                  <progress value="70" max="100"></progress>
+                  <button>Votez</button>
+                  <button>Faire un don</button>
 
-            <div className="imgtopprojet"></div>
-            <ul>
-                <li>
-                    Nom du Projet:
-                </li>
-                <li>
-                    Description:
-                </li>
-                <li> Lieux: </li>
-                <li> Budget Necessaire: </li>
-            </ul>
-
-            <div className="buttontop">
-                <progress value="25" max="100"></progress>
-                <button>Votez</button>
-                <button>Faire un don</button>
+              </div>
 
             </div>
+
+            <div className="imgtopprojet">
+            <ul>
+
+                <li>
+                    La Caravane des monstres est mon premier roman, né de ma fascination pour les freakshows et pour le merveilleux. Je fais appel à vous pour financer un premier tirage. Si vous aimez l'univers du cirque, l'ambiance des mystérieuses foires au monstres, les femmes à barbe, les voyantes de fête foraine et les natures atypiques, cette caravane n'attend plus que vous...
+                </li>
+                <li> Lieux: Metz </li>
+                <li> Budget Necessaire: 3 000€ </li>
+            </ul>
+          </div>
+
+
+
+          </div>
         </div>
-      </div>
+
 
 
         )

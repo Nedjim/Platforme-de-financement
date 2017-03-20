@@ -4,6 +4,7 @@ import './header.scss';
 import logo from '../images/banner2.png';
 
 
+
 export default class Header extends React.Component {
 
   render(){
@@ -31,6 +32,7 @@ export default class Header extends React.Component {
               </ul>
             </div>
           </nav>
+
 
         </header>
     )
