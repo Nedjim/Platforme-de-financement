@@ -3,6 +3,7 @@ import HomePage from './components/Form/HomePage.jsx';
 import DashboardPage from './components/Form/DashboardPage.jsx';
 import LoginPage from './components/Form/LoginPage.jsx';
 import SignUpPage from './components/Form/SignUpPage.jsx';
+import ProjectFormPage from './components/ProjectForm/ProjectFormPage.jsx';
 import Auth from './modules/Auth';
 import Pcomponents from './components/Projets/projectsComponents.jsx';
 
@@ -16,7 +17,7 @@ const routes = {
       path: '/',
       getComponent: (location, callback) => {
         if (Auth.isUserAuthenticated()) {
-          callback(null, DashboardPage);
+          callback(null, HomePage);
         } else {
           callback(null, HomePage);
         }
@@ -42,6 +43,12 @@ const routes = {
         replace('/');
       }
     },
+
+    {
+      path: '/project',
+      component: ProjectFormPage
+    },
+
     {
       path: '/projects',
       component:  Pcomponents

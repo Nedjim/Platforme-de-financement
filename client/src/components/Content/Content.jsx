@@ -1,6 +1,6 @@
 import React from 'react';
 import './content.scss';
-import axios from 'axios';
+//import axios from 'axios';
 import image from '../images/trdelnik.jpg';
 
 export default class Content extends React.Component {
