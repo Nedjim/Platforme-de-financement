@@ -5,7 +5,9 @@ import logo from '../images/banner2.png';
 
 
 export default class Header extends React.Component {
+
   render(){
+
     return(
         <header>
           <nav>
